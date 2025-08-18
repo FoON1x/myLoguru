@@ -1,6 +1,2 @@
-2025-08-18 18:00:53.242 | ERROR    | __main__:<module>:17 - error msg
-2025-08-18 18:00:53.242 | CRITICAL | __main__:<module>:18 - critical msg
-2025-08-18 19:21:52.486 | ERROR    | __main__:<module>:10 - error msg
-2025-08-18 19:21:52.487 | CRITICAL | __main__:<module>:11 - critical msg
-2025-08-18 19:22:38.869 | ERROR    | __main__:<module>:11 - error msg
-2025-08-18 19:22:38.872 | CRITICAL | __main__:<module>:12 - critical msg
+2025-08-18 20:35:41.322 | ERROR    | __main__:guru:9 - error msg
+2025-08-18 20:35:41.323 | CRITICAL | __main__:guru:10 - critical msg
