@@ -5,9 +5,7 @@ def main():
 
 
 if __name__ == "__main__":
-    # logger.remove()
-    logger.add('msg.log', level='ERROR')
-    # logger.remove(handler)
+
 
     logger.trace('trace msg')
     logger.debug('debug msg')
@@ -16,3 +14,14 @@ if __name__ == "__main__":
     logger.warning('warning msg')
     logger.error('error msg')
     logger.critical('critical msg')
+
+    child = logger.bind(foo='bar')
+    child.info('info msg')
+    with logger.contextualize(programmer="want"):
+        logger.trace('trace msg')
+        logger.debug('debug msg')
+        logger.info('info msg')
+        logger.success('success msg')
+        logger.warning('warning msg')
+        logger.error('error msg')
+        logger.critical('critical msg')

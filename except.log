@@ -1,0 +1,1192 @@
+2025-08-20 14:32:31.342 | ERROR    | __main__:<module>:6 - get except
+Traceback (most recent call last):
+
+  File "C:\Users\eric3\AppData\Local\Programs\Python\Python310\lib\runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+           │         │     └ {'__name__': '__main__', '__doc__': 'Entry point for launching an IPython kernel.\n\nThis is separate from the ipykernel pack...
+           │         └ <code object <module> at 0x000001ED7AD03050, file "e:\Study\python\loguru_study\.venv\lib\site-packages\ipykernel_launcher.py...
+           └ <function _run_code at 0x000001ED7ACFF1C0>
+
+  File "C:\Users\eric3\AppData\Local\Programs\Python\Python310\lib\runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+         │     └ {'__name__': '__main__', '__doc__': 'Entry point for launching an IPython kernel.\n\nThis is separate from the ipykernel pack...
+         └ <code object <module> at 0x000001ED7AD03050, file "e:\Study\python\loguru_study\.venv\lib\site-packages\ipykernel_launcher.py...
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\ipykernel_launcher.py", line 18, in <module>
+    app.launch_new_instance()
+    │   └ <bound method Application.launch_instance of <class 'ipykernel.kernelapp.IPKernelApp'>>
+    └ <module 'ipykernel.kernelapp' from 'e:\\Study\\python\\loguru_study\\.venv\\lib\\site-packages\\ipykernel\\kernelapp.py'>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\traitlets\config\application.py", line 1075, in launch_instance
+    app.start()
+    │   └ <function IPKernelApp.start at 0x000001ED7EE293F0>
+    └ <ipykernel.kernelapp.IPKernelApp object at 0x000001ED7ACAC700>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\ipykernel\kernelapp.py", line 739, in start
+    self.io_loop.start()
+    │    │       └ <function BaseAsyncIOLoop.start at 0x000001ED7EE97A30>
+    │    └ <tornado.platform.asyncio.AsyncIOMainLoop object at 0x000001ED7EE9FC10>
+    └ <ipykernel.kernelapp.IPKernelApp object at 0x000001ED7ACAC700>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\tornado\platform\asyncio.py", line 211, in start
+    self.asyncio_loop.run_forever()
+    │    │            └ <function BaseEventLoop.run_forever at 0x000001ED7CD27A30>
+    │    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+    └ <tornado.platform.asyncio.AsyncIOMainLoop object at 0x000001ED7EE9FC10>
+
+  File "C:\Users\eric3\AppData\Local\Programs\Python\Python310\lib\asyncio\base_events.py", line 595, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x000001ED7CD415A0>
+    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\eric3\AppData\Local\Programs\Python\Python310\lib\asyncio\base_events.py", line 1881, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x000001ED7CCD0CA0>
+    └ <Handle Task.task_wakeup(<Future finis...3B)>, ...],))>)>
+
+  File "C:\Users\eric3\AppData\Local\Programs\Python\Python310\lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle Task.task_wakeup(<Future finis...3B)>, ...],))>)>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle Task.task_wakeup(<Future finis...3B)>, ...],))>)>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle Task.task_wakeup(<Future finis...3B)>, ...],))>)>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\ipykernel\kernelbase.py", line 519, in dispatch_queue
+    await self.process_one()
+          │    └ <function Kernel.process_one at 0x000001ED7EDF0040>
+          └ <ipykernel.ipkernel.IPythonKernel object at 0x000001ED7EECC220>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\ipykernel\kernelbase.py", line 508, in process_one
+    await dispatch(*args)
+          │         └ ([<zmq.Frame(b'25851b57-585'...36B)>, <zmq.Frame(b'<IDS|MSG>')>, <zmq.Frame(b'2eed8acce106'...64B)>, <zmq.Frame(b'{"date":"20...
+          └ <bound method Kernel.dispatch_shell of <ipykernel.ipkernel.IPythonKernel object at 0x000001ED7EECC220>>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\ipykernel\kernelbase.py", line 400, in dispatch_shell
+    await result
+          └ <coroutine object IPythonKernel.execute_request at 0x000001ED01293D80>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\ipykernel\ipkernel.py", line 368, in execute_request
+    await super().execute_request(stream, ident, parent)
+                                  │       │      └ {'header': {'date': datetime.datetime(2025, 8, 20, 6, 32, 31, 337000, tzinfo=tzutc()), 'msg_id': 'ec16622a-b568-4814-8de4-766...
+                                  │       └ [b'25851b57-5855-40de-98a2-6b3041c81f43']
+                                  └ <zmq.eventloop.zmqstream.ZMQStream object at 0x000001ED7EE9F970>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\ipykernel\kernelbase.py", line 767, in execute_request
+    reply_content = await reply_content
+                          └ <coroutine object IPythonKernel.do_execute at 0x000001ED01293D10>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\ipykernel\ipkernel.py", line 455, in do_execute
+    res = shell.run_cell(
+          │     └ <function ZMQInteractiveShell.run_cell at 0x000001ED7EE1E9E0>
+          └ <ipykernel.zmqshell.ZMQInteractiveShell object at 0x000001ED7F305030>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\ipykernel\zmqshell.py", line 577, in run_cell
+    return super().run_cell(*args, **kwargs)
+                             │       └ {'store_history': True, 'silent': False, 'cell_id': 'vscode-notebook-cell:/e%3A/Study/python/loguru_study/guru.ipynb#X25sZmls...
+                             └ ("logger.remove()\nlogger.add('except.log')\ntry:\n    1 / 0\nexcept:\n    logger.exception('get except')",)
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\IPython\core\interactiveshell.py", line 3077, in run_cell
+    result = self._run_cell(
+             │    └ <function InteractiveShell._run_cell at 0x000001ED7DC99240>
+             └ <ipykernel.zmqshell.ZMQInteractiveShell object at 0x000001ED7F305030>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\IPython\core\interactiveshell.py", line 3132, in _run_cell
+    result = runner(coro)
+             │      └ <coroutine object InteractiveShell.run_cell_async at 0x000001ED012B0660>
+             └ <function _pseudo_sync_runner at 0x000001ED7DC88B80>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\IPython\core\async_helpers.py", line 128, in _pseudo_sync_runner
+    coro.send(None)
+    │    └ <method 'send' of 'coroutine' objects>
+    └ <coroutine object InteractiveShell.run_cell_async at 0x000001ED012B0660>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\IPython\core\interactiveshell.py", line 3336, in run_cell_async
+    has_raised = await self.run_ast_nodes(code_ast.body, cell_name,
+                       │    │             │        │     └ 'C:\\Users\\eric3\\AppData\\Local\\Temp\\ipykernel_9132\\4002150455.py'
+                       │    │             │        └ [<ast.Expr object at 0x000001ED7FAF5CC0>, <ast.Expr object at 0x000001ED7FAF5C60>, <ast.Try object at 0x000001ED7FAF70A0>]
+                       │    │             └ <ast.Module object at 0x000001ED7FAF7F10>
+                       │    └ <function InteractiveShell.run_ast_nodes at 0x000001ED7DC99510>
+                       └ <ipykernel.zmqshell.ZMQInteractiveShell object at 0x000001ED7F305030>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\IPython\core\interactiveshell.py", line 3519, in run_ast_nodes
+    if await self.run_code(code, result, async_=asy):
+             │    │        │     │              └ False
+             │    │        │     └ <ExecutionResult object at 1ed7faf4c10, execution_count=33 error_before_exec=None error_in_exec=None info=<ExecutionInfo obje...
+             │    │        └ <code object <module> at 0x000001ED7F4D66B0, file "C:\Users\eric3\AppData\Local\Temp\ipykernel_9132\4002150455.py", line 1>
+             │    └ <function InteractiveShell.run_code at 0x000001ED7DC995A0>
+             └ <ipykernel.zmqshell.ZMQInteractiveShell object at 0x000001ED7F305030>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\IPython\core\interactiveshell.py", line 3579, in run_code
+    exec(code_obj, self.user_global_ns, self.user_ns)
+         │         │    │               │    └ {'__name__': '__main__', '__doc__': 'Automatically created module for IPython interactive environment', '__package__': None, ...
+         │         │    │               └ <ipykernel.zmqshell.ZMQInteractiveShell object at 0x000001ED7F305030>
+         │         │    └ <property object at 0x000001ED7DC76D40>
+         │         └ <ipykernel.zmqshell.ZMQInteractiveShell object at 0x000001ED7F305030>
+         └ <code object <module> at 0x000001ED7F4D66B0, file "C:\Users\eric3\AppData\Local\Temp\ipykernel_9132\4002150455.py", line 1>
+
+> File "C:\Users\eric3\AppData\Local\Temp\ipykernel_9132\4002150455.py", line 4, in <module>
+    1 / 0
+
+ZeroDivisionError: division by zero
+2025-08-20 14:33:28.358 | ERROR    | __main__:<module>:7 - get except
+Traceback (most recent call last):
+
+  File "C:\Users\eric3\AppData\Local\Programs\Python\Python310\lib\runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+           │         │     └ {'__name__': '__main__', '__doc__': 'Entry point for launching an IPython kernel.\n\nThis is separate from the ipykernel pack...
+           │         └ <code object <module> at 0x000001ED7AD03050, file "e:\Study\python\loguru_study\.venv\lib\site-packages\ipykernel_launcher.py...
+           └ <function _run_code at 0x000001ED7ACFF1C0>
+
+  File "C:\Users\eric3\AppData\Local\Programs\Python\Python310\lib\runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+         │     └ {'__name__': '__main__', '__doc__': 'Entry point for launching an IPython kernel.\n\nThis is separate from the ipykernel pack...
+         └ <code object <module> at 0x000001ED7AD03050, file "e:\Study\python\loguru_study\.venv\lib\site-packages\ipykernel_launcher.py...
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\ipykernel_launcher.py", line 18, in <module>
+    app.launch_new_instance()
+    │   └ <bound method Application.launch_instance of <class 'ipykernel.kernelapp.IPKernelApp'>>
+    └ <module 'ipykernel.kernelapp' from 'e:\\Study\\python\\loguru_study\\.venv\\lib\\site-packages\\ipykernel\\kernelapp.py'>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\traitlets\config\application.py", line 1075, in launch_instance
+    app.start()
+    │   └ <function IPKernelApp.start at 0x000001ED7EE293F0>
+    └ <ipykernel.kernelapp.IPKernelApp object at 0x000001ED7ACAC700>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\ipykernel\kernelapp.py", line 739, in start
+    self.io_loop.start()
+    │    │       └ <function BaseAsyncIOLoop.start at 0x000001ED7EE97A30>
+    │    └ <tornado.platform.asyncio.AsyncIOMainLoop object at 0x000001ED7EE9FC10>
+    └ <ipykernel.kernelapp.IPKernelApp object at 0x000001ED7ACAC700>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\tornado\platform\asyncio.py", line 211, in start
+    self.asyncio_loop.run_forever()
+    │    │            └ <function BaseEventLoop.run_forever at 0x000001ED7CD27A30>
+    │    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+    └ <tornado.platform.asyncio.AsyncIOMainLoop object at 0x000001ED7EE9FC10>
+
+  File "C:\Users\eric3\AppData\Local\Programs\Python\Python310\lib\asyncio\base_events.py", line 595, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x000001ED7CD415A0>
+    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\eric3\AppData\Local\Programs\Python\Python310\lib\asyncio\base_events.py", line 1881, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x000001ED7CCD0CA0>
+    └ <Handle Task.task_wakeup(<Future finis...3B)>, ...],))>)>
+
+  File "C:\Users\eric3\AppData\Local\Programs\Python\Python310\lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle Task.task_wakeup(<Future finis...3B)>, ...],))>)>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle Task.task_wakeup(<Future finis...3B)>, ...],))>)>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle Task.task_wakeup(<Future finis...3B)>, ...],))>)>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\ipykernel\kernelbase.py", line 519, in dispatch_queue
+    await self.process_one()
+          │    └ <function Kernel.process_one at 0x000001ED7EDF0040>
+          └ <ipykernel.ipkernel.IPythonKernel object at 0x000001ED7EECC220>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\ipykernel\kernelbase.py", line 508, in process_one
+    await dispatch(*args)
+          │         └ ([<zmq.Frame(b'25851b57-585'...36B)>, <zmq.Frame(b'<IDS|MSG>')>, <zmq.Frame(b'448e44797942'...64B)>, <zmq.Frame(b'{"date":"20...
+          └ <bound method Kernel.dispatch_shell of <ipykernel.ipkernel.IPythonKernel object at 0x000001ED7EECC220>>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\ipykernel\kernelbase.py", line 400, in dispatch_shell
+    await result
+          └ <coroutine object IPythonKernel.execute_request at 0x000001ED01293E60>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\ipykernel\ipkernel.py", line 368, in execute_request
+    await super().execute_request(stream, ident, parent)
+                                  │       │      └ {'header': {'date': datetime.datetime(2025, 8, 20, 6, 33, 28, 352000, tzinfo=tzutc()), 'msg_id': '9ff1bfc0-28ca-4150-970b-885...
+                                  │       └ [b'25851b57-5855-40de-98a2-6b3041c81f43']
+                                  └ <zmq.eventloop.zmqstream.ZMQStream object at 0x000001ED7EE9F970>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\ipykernel\kernelbase.py", line 767, in execute_request
+    reply_content = await reply_content
+                          └ <coroutine object IPythonKernel.do_execute at 0x000001ED01097E60>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\ipykernel\ipkernel.py", line 455, in do_execute
+    res = shell.run_cell(
+          │     └ <function ZMQInteractiveShell.run_cell at 0x000001ED7EE1E9E0>
+          └ <ipykernel.zmqshell.ZMQInteractiveShell object at 0x000001ED7F305030>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\ipykernel\zmqshell.py", line 577, in run_cell
+    return super().run_cell(*args, **kwargs)
+                             │       └ {'store_history': True, 'silent': False, 'cell_id': 'vscode-notebook-cell:/e%3A/Study/python/loguru_study/guru.ipynb#X25sZmls...
+                             └ ("logger.remove()\nlogger.add('except.log')\ntry:\n    1 / 0\nexcept:\n    # loguru会记录异常的完整信息\n    logger.exception('get exce...
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\IPython\core\interactiveshell.py", line 3077, in run_cell
+    result = self._run_cell(
+             │    └ <function InteractiveShell._run_cell at 0x000001ED7DC99240>
+             └ <ipykernel.zmqshell.ZMQInteractiveShell object at 0x000001ED7F305030>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\IPython\core\interactiveshell.py", line 3132, in _run_cell
+    result = runner(coro)
+             │      └ <coroutine object InteractiveShell.run_cell_async at 0x000001ED01096B20>
+             └ <function _pseudo_sync_runner at 0x000001ED7DC88B80>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\IPython\core\async_helpers.py", line 128, in _pseudo_sync_runner
+    coro.send(None)
+    │    └ <method 'send' of 'coroutine' objects>
+    └ <coroutine object InteractiveShell.run_cell_async at 0x000001ED01096B20>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\IPython\core\interactiveshell.py", line 3336, in run_cell_async
+    has_raised = await self.run_ast_nodes(code_ast.body, cell_name,
+                       │    │             │        │     └ 'C:\\Users\\eric3\\AppData\\Local\\Temp\\ipykernel_9132\\2998385818.py'
+                       │    │             │        └ [<ast.Expr object at 0x000001ED01108190>, <ast.Expr object at 0x000001ED7FB204F0>, <ast.Try object at 0x000001ED7FAF6A70>]
+                       │    │             └ <ast.Module object at 0x000001ED011081F0>
+                       │    └ <function InteractiveShell.run_ast_nodes at 0x000001ED7DC99510>
+                       └ <ipykernel.zmqshell.ZMQInteractiveShell object at 0x000001ED7F305030>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\IPython\core\interactiveshell.py", line 3519, in run_ast_nodes
+    if await self.run_code(code, result, async_=asy):
+             │    │        │     │              └ False
+             │    │        │     └ <ExecutionResult object at 1ed7faf77f0, execution_count=34 error_before_exec=None error_in_exec=None info=<ExecutionInfo obje...
+             │    │        └ <code object <module> at 0x000001ED0105D4D0, file "C:\Users\eric3\AppData\Local\Temp\ipykernel_9132\2998385818.py", line 1>
+             │    └ <function InteractiveShell.run_code at 0x000001ED7DC995A0>
+             └ <ipykernel.zmqshell.ZMQInteractiveShell object at 0x000001ED7F305030>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\IPython\core\interactiveshell.py", line 3579, in run_code
+    exec(code_obj, self.user_global_ns, self.user_ns)
+         │         │    │               │    └ {'__name__': '__main__', '__doc__': 'Automatically created module for IPython interactive environment', '__package__': None, ...
+         │         │    │               └ <ipykernel.zmqshell.ZMQInteractiveShell object at 0x000001ED7F305030>
+         │         │    └ <property object at 0x000001ED7DC76D40>
+         │         └ <ipykernel.zmqshell.ZMQInteractiveShell object at 0x000001ED7F305030>
+         └ <code object <module> at 0x000001ED0105D4D0, file "C:\Users\eric3\AppData\Local\Temp\ipykernel_9132\2998385818.py", line 1>
+
+> File "C:\Users\eric3\AppData\Local\Temp\ipykernel_9132\2998385818.py", line 4, in <module>
+    1 / 0
+
+ZeroDivisionError: division by zero
+2025-08-20 14:34:28.195 | ERROR    | __main__:<module>:1 - An error has been caught in function '<module>', process 'MainProcess' (9132), thread 'MainThread' (12952):
+Traceback (most recent call last):
+
+  File "C:\Users\eric3\AppData\Local\Programs\Python\Python310\lib\runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+           │         │     └ {'__name__': '__main__', '__doc__': 'Entry point for launching an IPython kernel.\n\nThis is separate from the ipykernel pack...
+           │         └ <code object <module> at 0x000001ED7AD03050, file "e:\Study\python\loguru_study\.venv\lib\site-packages\ipykernel_launcher.py...
+           └ <function _run_code at 0x000001ED7ACFF1C0>
+
+  File "C:\Users\eric3\AppData\Local\Programs\Python\Python310\lib\runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+         │     └ {'__name__': '__main__', '__doc__': 'Entry point for launching an IPython kernel.\n\nThis is separate from the ipykernel pack...
+         └ <code object <module> at 0x000001ED7AD03050, file "e:\Study\python\loguru_study\.venv\lib\site-packages\ipykernel_launcher.py...
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\ipykernel_launcher.py", line 18, in <module>
+    app.launch_new_instance()
+    │   └ <bound method Application.launch_instance of <class 'ipykernel.kernelapp.IPKernelApp'>>
+    └ <module 'ipykernel.kernelapp' from 'e:\\Study\\python\\loguru_study\\.venv\\lib\\site-packages\\ipykernel\\kernelapp.py'>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\traitlets\config\application.py", line 1075, in launch_instance
+    app.start()
+    │   └ <function IPKernelApp.start at 0x000001ED7EE293F0>
+    └ <ipykernel.kernelapp.IPKernelApp object at 0x000001ED7ACAC700>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\ipykernel\kernelapp.py", line 739, in start
+    self.io_loop.start()
+    │    │       └ <function BaseAsyncIOLoop.start at 0x000001ED7EE97A30>
+    │    └ <tornado.platform.asyncio.AsyncIOMainLoop object at 0x000001ED7EE9FC10>
+    └ <ipykernel.kernelapp.IPKernelApp object at 0x000001ED7ACAC700>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\tornado\platform\asyncio.py", line 211, in start
+    self.asyncio_loop.run_forever()
+    │    │            └ <function BaseEventLoop.run_forever at 0x000001ED7CD27A30>
+    │    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+    └ <tornado.platform.asyncio.AsyncIOMainLoop object at 0x000001ED7EE9FC10>
+
+  File "C:\Users\eric3\AppData\Local\Programs\Python\Python310\lib\asyncio\base_events.py", line 595, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x000001ED7CD415A0>
+    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\eric3\AppData\Local\Programs\Python\Python310\lib\asyncio\base_events.py", line 1881, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x000001ED7CCD0CA0>
+    └ <Handle Task.task_wakeup(<Future finis...3B)>, ...],))>)>
+
+  File "C:\Users\eric3\AppData\Local\Programs\Python\Python310\lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle Task.task_wakeup(<Future finis...3B)>, ...],))>)>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle Task.task_wakeup(<Future finis...3B)>, ...],))>)>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle Task.task_wakeup(<Future finis...3B)>, ...],))>)>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\ipykernel\kernelbase.py", line 519, in dispatch_queue
+    await self.process_one()
+          │    └ <function Kernel.process_one at 0x000001ED7EDF0040>
+          └ <ipykernel.ipkernel.IPythonKernel object at 0x000001ED7EECC220>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\ipykernel\kernelbase.py", line 508, in process_one
+    await dispatch(*args)
+          │         └ ([<zmq.Frame(b'25851b57-585'...36B)>, <zmq.Frame(b'<IDS|MSG>')>, <zmq.Frame(b'ed408f36e3e6'...64B)>, <zmq.Frame(b'{"date":"20...
+          └ <bound method Kernel.dispatch_shell of <ipykernel.ipkernel.IPythonKernel object at 0x000001ED7EECC220>>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\ipykernel\kernelbase.py", line 400, in dispatch_shell
+    await result
+          └ <coroutine object IPythonKernel.execute_request at 0x000001ED01097AE0>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\ipykernel\ipkernel.py", line 368, in execute_request
+    await super().execute_request(stream, ident, parent)
+                                  │       │      └ {'header': {'date': datetime.datetime(2025, 8, 20, 6, 34, 28, 192000, tzinfo=tzutc()), 'msg_id': 'c2fc97db-7370-4ca1-8ee8-d56...
+                                  │       └ [b'25851b57-5855-40de-98a2-6b3041c81f43']
+                                  └ <zmq.eventloop.zmqstream.ZMQStream object at 0x000001ED7EE9F970>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\ipykernel\kernelbase.py", line 767, in execute_request
+    reply_content = await reply_content
+                          └ <coroutine object IPythonKernel.do_execute at 0x000001ED012B0BA0>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\ipykernel\ipkernel.py", line 455, in do_execute
+    res = shell.run_cell(
+          │     └ <function ZMQInteractiveShell.run_cell at 0x000001ED7EE1E9E0>
+          └ <ipykernel.zmqshell.ZMQInteractiveShell object at 0x000001ED7F305030>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\ipykernel\zmqshell.py", line 577, in run_cell
+    return super().run_cell(*args, **kwargs)
+                             │       └ {'store_history': True, 'silent': False, 'cell_id': 'vscode-notebook-cell:/e%3A/Study/python/loguru_study/guru.ipynb#X32sZmls...
+                             └ ('with logger.catch():\n    1 / 0',)
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\IPython\core\interactiveshell.py", line 3077, in run_cell
+    result = self._run_cell(
+             │    └ <function InteractiveShell._run_cell at 0x000001ED7DC99240>
+             └ <ipykernel.zmqshell.ZMQInteractiveShell object at 0x000001ED7F305030>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\IPython\core\interactiveshell.py", line 3132, in _run_cell
+    result = runner(coro)
+             │      └ <coroutine object InteractiveShell.run_cell_async at 0x000001ED012B0C10>
+             └ <function _pseudo_sync_runner at 0x000001ED7DC88B80>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\IPython\core\async_helpers.py", line 128, in _pseudo_sync_runner
+    coro.send(None)
+    │    └ <method 'send' of 'coroutine' objects>
+    └ <coroutine object InteractiveShell.run_cell_async at 0x000001ED012B0C10>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\IPython\core\interactiveshell.py", line 3336, in run_cell_async
+    has_raised = await self.run_ast_nodes(code_ast.body, cell_name,
+                       │    │             │        │     └ 'C:\\Users\\eric3\\AppData\\Local\\Temp\\ipykernel_9132\\60166502.py'
+                       │    │             │        └ [<ast.With object at 0x000001ED7FB21360>]
+                       │    │             └ <ast.Module object at 0x000001ED7FB20730>
+                       │    └ <function InteractiveShell.run_ast_nodes at 0x000001ED7DC99510>
+                       └ <ipykernel.zmqshell.ZMQInteractiveShell object at 0x000001ED7F305030>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\IPython\core\interactiveshell.py", line 3519, in run_ast_nodes
+    if await self.run_code(code, result, async_=asy):
+             │    │        │     │              └ False
+             │    │        │     └ <ExecutionResult object at 1ed7faf4c10, execution_count=35 error_before_exec=None error_in_exec=None info=<ExecutionInfo obje...
+             │    │        └ <code object <module> at 0x000001ED7F4D7260, file "C:\Users\eric3\AppData\Local\Temp\ipykernel_9132\60166502.py", line 1>
+             │    └ <function InteractiveShell.run_code at 0x000001ED7DC995A0>
+             └ <ipykernel.zmqshell.ZMQInteractiveShell object at 0x000001ED7F305030>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\IPython\core\interactiveshell.py", line 3579, in run_code
+    exec(code_obj, self.user_global_ns, self.user_ns)
+         │         │    │               │    └ {'__name__': '__main__', '__doc__': 'Automatically created module for IPython interactive environment', '__package__': None, ...
+         │         │    │               └ <ipykernel.zmqshell.ZMQInteractiveShell object at 0x000001ED7F305030>
+         │         │    └ <property object at 0x000001ED7DC76D40>
+         │         └ <ipykernel.zmqshell.ZMQInteractiveShell object at 0x000001ED7F305030>
+         └ <code object <module> at 0x000001ED7F4D7260, file "C:\Users\eric3\AppData\Local\Temp\ipykernel_9132\60166502.py", line 1>
+
+> File "C:\Users\eric3\AppData\Local\Temp\ipykernel_9132\60166502.py", line 2, in <module>
+    1 / 0
+
+ZeroDivisionError: division by zero
+2025-08-20 14:34:47.637 | ERROR    | __main__:<module>:8 - get except
+Traceback (most recent call last):
+
+  File "C:\Users\eric3\AppData\Local\Programs\Python\Python310\lib\runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+           │         │     └ {'__name__': '__main__', '__doc__': 'Entry point for launching an IPython kernel.\n\nThis is separate from the ipykernel pack...
+           │         └ <code object <module> at 0x000001ED7AD03050, file "e:\Study\python\loguru_study\.venv\lib\site-packages\ipykernel_launcher.py...
+           └ <function _run_code at 0x000001ED7ACFF1C0>
+
+  File "C:\Users\eric3\AppData\Local\Programs\Python\Python310\lib\runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+         │     └ {'__name__': '__main__', '__doc__': 'Entry point for launching an IPython kernel.\n\nThis is separate from the ipykernel pack...
+         └ <code object <module> at 0x000001ED7AD03050, file "e:\Study\python\loguru_study\.venv\lib\site-packages\ipykernel_launcher.py...
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\ipykernel_launcher.py", line 18, in <module>
+    app.launch_new_instance()
+    │   └ <bound method Application.launch_instance of <class 'ipykernel.kernelapp.IPKernelApp'>>
+    └ <module 'ipykernel.kernelapp' from 'e:\\Study\\python\\loguru_study\\.venv\\lib\\site-packages\\ipykernel\\kernelapp.py'>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\traitlets\config\application.py", line 1075, in launch_instance
+    app.start()
+    │   └ <function IPKernelApp.start at 0x000001ED7EE293F0>
+    └ <ipykernel.kernelapp.IPKernelApp object at 0x000001ED7ACAC700>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\ipykernel\kernelapp.py", line 739, in start
+    self.io_loop.start()
+    │    │       └ <function BaseAsyncIOLoop.start at 0x000001ED7EE97A30>
+    │    └ <tornado.platform.asyncio.AsyncIOMainLoop object at 0x000001ED7EE9FC10>
+    └ <ipykernel.kernelapp.IPKernelApp object at 0x000001ED7ACAC700>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\tornado\platform\asyncio.py", line 211, in start
+    self.asyncio_loop.run_forever()
+    │    │            └ <function BaseEventLoop.run_forever at 0x000001ED7CD27A30>
+    │    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+    └ <tornado.platform.asyncio.AsyncIOMainLoop object at 0x000001ED7EE9FC10>
+
+  File "C:\Users\eric3\AppData\Local\Programs\Python\Python310\lib\asyncio\base_events.py", line 595, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x000001ED7CD415A0>
+    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\eric3\AppData\Local\Programs\Python\Python310\lib\asyncio\base_events.py", line 1881, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x000001ED7CCD0CA0>
+    └ <Handle Task.task_wakeup(<Future finis...3B)>, ...],))>)>
+
+  File "C:\Users\eric3\AppData\Local\Programs\Python\Python310\lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle Task.task_wakeup(<Future finis...3B)>, ...],))>)>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle Task.task_wakeup(<Future finis...3B)>, ...],))>)>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle Task.task_wakeup(<Future finis...3B)>, ...],))>)>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\ipykernel\kernelbase.py", line 519, in dispatch_queue
+    await self.process_one()
+          │    └ <function Kernel.process_one at 0x000001ED7EDF0040>
+          └ <ipykernel.ipkernel.IPythonKernel object at 0x000001ED7EECC220>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\ipykernel\kernelbase.py", line 508, in process_one
+    await dispatch(*args)
+          │         └ ([<zmq.Frame(b'25851b57-585'...36B)>, <zmq.Frame(b'<IDS|MSG>')>, <zmq.Frame(b'229460f265fe'...64B)>, <zmq.Frame(b'{"date":"20...
+          └ <bound method Kernel.dispatch_shell of <ipykernel.ipkernel.IPythonKernel object at 0x000001ED7EECC220>>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\ipykernel\kernelbase.py", line 400, in dispatch_shell
+    await result
+          └ <coroutine object IPythonKernel.execute_request at 0x000001ED012B12A0>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\ipykernel\ipkernel.py", line 368, in execute_request
+    await super().execute_request(stream, ident, parent)
+                                  │       │      └ {'header': {'date': datetime.datetime(2025, 8, 20, 6, 34, 47, 632000, tzinfo=tzutc()), 'msg_id': '92e8aae5-76ec-4f80-848c-d2e...
+                                  │       └ [b'25851b57-5855-40de-98a2-6b3041c81f43']
+                                  └ <zmq.eventloop.zmqstream.ZMQStream object at 0x000001ED7EE9F970>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\ipykernel\kernelbase.py", line 767, in execute_request
+    reply_content = await reply_content
+                          └ <coroutine object IPythonKernel.do_execute at 0x000001ED012B0DD0>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\ipykernel\ipkernel.py", line 455, in do_execute
+    res = shell.run_cell(
+          │     └ <function ZMQInteractiveShell.run_cell at 0x000001ED7EE1E9E0>
+          └ <ipykernel.zmqshell.ZMQInteractiveShell object at 0x000001ED7F305030>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\ipykernel\zmqshell.py", line 577, in run_cell
+    return super().run_cell(*args, **kwargs)
+                             │       └ {'store_history': True, 'silent': False, 'cell_id': 'vscode-notebook-cell:/e%3A/Study/python/loguru_study/guru.ipynb#X25sZmls...
+                             └ ("logger.remove()\nlogger.add(sys.stdout)\nlogger.add('except.log')\ntry:\n    1 / 0   # 除0异常\nexcept:\n    # loguru会记录异常的完整信...
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\IPython\core\interactiveshell.py", line 3077, in run_cell
+    result = self._run_cell(
+             │    └ <function InteractiveShell._run_cell at 0x000001ED7DC99240>
+             └ <ipykernel.zmqshell.ZMQInteractiveShell object at 0x000001ED7F305030>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\IPython\core\interactiveshell.py", line 3132, in _run_cell
+    result = runner(coro)
+             │      └ <coroutine object InteractiveShell.run_cell_async at 0x000001ED012B1540>
+             └ <function _pseudo_sync_runner at 0x000001ED7DC88B80>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\IPython\core\async_helpers.py", line 128, in _pseudo_sync_runner
+    coro.send(None)
+    │    └ <method 'send' of 'coroutine' objects>
+    └ <coroutine object InteractiveShell.run_cell_async at 0x000001ED012B1540>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\IPython\core\interactiveshell.py", line 3336, in run_cell_async
+    has_raised = await self.run_ast_nodes(code_ast.body, cell_name,
+                       │    │             │        │     └ 'C:\\Users\\eric3\\AppData\\Local\\Temp\\ipykernel_9132\\287218791.py'
+                       │    │             │        └ [<ast.Expr object at 0x000001ED7FB21360>, <ast.Expr object at 0x000001ED7FAF6530>, <ast.Expr object at 0x000001ED7F72A410>, <...
+                       │    │             └ <ast.Module object at 0x000001ED7FB20D60>
+                       │    └ <function InteractiveShell.run_ast_nodes at 0x000001ED7DC99510>
+                       └ <ipykernel.zmqshell.ZMQInteractiveShell object at 0x000001ED7F305030>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\IPython\core\interactiveshell.py", line 3519, in run_ast_nodes
+    if await self.run_code(code, result, async_=asy):
+             │    │        │     │              └ False
+             │    │        │     └ <ExecutionResult object at 1ed7faf79a0, execution_count=36 error_before_exec=None error_in_exec=None info=<ExecutionInfo obje...
+             │    │        └ <code object <module> at 0x000001ED010E6130, file "C:\Users\eric3\AppData\Local\Temp\ipykernel_9132\287218791.py", line 1>
+             │    └ <function InteractiveShell.run_code at 0x000001ED7DC995A0>
+             └ <ipykernel.zmqshell.ZMQInteractiveShell object at 0x000001ED7F305030>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\IPython\core\interactiveshell.py", line 3579, in run_code
+    exec(code_obj, self.user_global_ns, self.user_ns)
+         │         │    │               │    └ {'__name__': '__main__', '__doc__': 'Automatically created module for IPython interactive environment', '__package__': None, ...
+         │         │    │               └ <ipykernel.zmqshell.ZMQInteractiveShell object at 0x000001ED7F305030>
+         │         │    └ <property object at 0x000001ED7DC76D40>
+         │         └ <ipykernel.zmqshell.ZMQInteractiveShell object at 0x000001ED7F305030>
+         └ <code object <module> at 0x000001ED010E6130, file "C:\Users\eric3\AppData\Local\Temp\ipykernel_9132\287218791.py", line 1>
+
+> File "C:\Users\eric3\AppData\Local\Temp\ipykernel_9132\287218791.py", line 5, in <module>
+    1 / 0   # 除0异常
+
+ZeroDivisionError: division by zero
+2025-08-20 14:34:51.209 | ERROR    | __main__:<module>:1 - An error has been caught in function '<module>', process 'MainProcess' (9132), thread 'MainThread' (12952):
+Traceback (most recent call last):
+
+  File "C:\Users\eric3\AppData\Local\Programs\Python\Python310\lib\runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+           │         │     └ {'__name__': '__main__', '__doc__': 'Entry point for launching an IPython kernel.\n\nThis is separate from the ipykernel pack...
+           │         └ <code object <module> at 0x000001ED7AD03050, file "e:\Study\python\loguru_study\.venv\lib\site-packages\ipykernel_launcher.py...
+           └ <function _run_code at 0x000001ED7ACFF1C0>
+
+  File "C:\Users\eric3\AppData\Local\Programs\Python\Python310\lib\runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+         │     └ {'__name__': '__main__', '__doc__': 'Entry point for launching an IPython kernel.\n\nThis is separate from the ipykernel pack...
+         └ <code object <module> at 0x000001ED7AD03050, file "e:\Study\python\loguru_study\.venv\lib\site-packages\ipykernel_launcher.py...
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\ipykernel_launcher.py", line 18, in <module>
+    app.launch_new_instance()
+    │   └ <bound method Application.launch_instance of <class 'ipykernel.kernelapp.IPKernelApp'>>
+    └ <module 'ipykernel.kernelapp' from 'e:\\Study\\python\\loguru_study\\.venv\\lib\\site-packages\\ipykernel\\kernelapp.py'>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\traitlets\config\application.py", line 1075, in launch_instance
+    app.start()
+    │   └ <function IPKernelApp.start at 0x000001ED7EE293F0>
+    └ <ipykernel.kernelapp.IPKernelApp object at 0x000001ED7ACAC700>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\ipykernel\kernelapp.py", line 739, in start
+    self.io_loop.start()
+    │    │       └ <function BaseAsyncIOLoop.start at 0x000001ED7EE97A30>
+    │    └ <tornado.platform.asyncio.AsyncIOMainLoop object at 0x000001ED7EE9FC10>
+    └ <ipykernel.kernelapp.IPKernelApp object at 0x000001ED7ACAC700>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\tornado\platform\asyncio.py", line 211, in start
+    self.asyncio_loop.run_forever()
+    │    │            └ <function BaseEventLoop.run_forever at 0x000001ED7CD27A30>
+    │    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+    └ <tornado.platform.asyncio.AsyncIOMainLoop object at 0x000001ED7EE9FC10>
+
+  File "C:\Users\eric3\AppData\Local\Programs\Python\Python310\lib\asyncio\base_events.py", line 595, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x000001ED7CD415A0>
+    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\eric3\AppData\Local\Programs\Python\Python310\lib\asyncio\base_events.py", line 1881, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x000001ED7CCD0CA0>
+    └ <Handle Task.task_wakeup(<Future finis...3B)>, ...],))>)>
+
+  File "C:\Users\eric3\AppData\Local\Programs\Python\Python310\lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle Task.task_wakeup(<Future finis...3B)>, ...],))>)>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle Task.task_wakeup(<Future finis...3B)>, ...],))>)>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle Task.task_wakeup(<Future finis...3B)>, ...],))>)>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\ipykernel\kernelbase.py", line 519, in dispatch_queue
+    await self.process_one()
+          │    └ <function Kernel.process_one at 0x000001ED7EDF0040>
+          └ <ipykernel.ipkernel.IPythonKernel object at 0x000001ED7EECC220>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\ipykernel\kernelbase.py", line 508, in process_one
+    await dispatch(*args)
+          │         └ ([<zmq.Frame(b'25851b57-585'...36B)>, <zmq.Frame(b'<IDS|MSG>')>, <zmq.Frame(b'101f8b5aa257'...64B)>, <zmq.Frame(b'{"date":"20...
+          └ <bound method Kernel.dispatch_shell of <ipykernel.ipkernel.IPythonKernel object at 0x000001ED7EECC220>>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\ipykernel\kernelbase.py", line 400, in dispatch_shell
+    await result
+          └ <coroutine object IPythonKernel.execute_request at 0x000001ED012B12A0>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\ipykernel\ipkernel.py", line 368, in execute_request
+    await super().execute_request(stream, ident, parent)
+                                  │       │      └ {'header': {'date': datetime.datetime(2025, 8, 20, 6, 34, 51, 207000, tzinfo=tzutc()), 'msg_id': '626f7dd3-ff57-4c1d-8d63-0a9...
+                                  │       └ [b'25851b57-5855-40de-98a2-6b3041c81f43']
+                                  └ <zmq.eventloop.zmqstream.ZMQStream object at 0x000001ED7EE9F970>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\ipykernel\kernelbase.py", line 767, in execute_request
+    reply_content = await reply_content
+                          └ <coroutine object IPythonKernel.do_execute at 0x000001ED012B1460>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\ipykernel\ipkernel.py", line 455, in do_execute
+    res = shell.run_cell(
+          │     └ <function ZMQInteractiveShell.run_cell at 0x000001ED7EE1E9E0>
+          └ <ipykernel.zmqshell.ZMQInteractiveShell object at 0x000001ED7F305030>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\ipykernel\zmqshell.py", line 577, in run_cell
+    return super().run_cell(*args, **kwargs)
+                             │       └ {'store_history': True, 'silent': False, 'cell_id': 'vscode-notebook-cell:/e%3A/Study/python/loguru_study/guru.ipynb#X32sZmls...
+                             └ ('with logger.catch():\n    1 / 0',)
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\IPython\core\interactiveshell.py", line 3077, in run_cell
+    result = self._run_cell(
+             │    └ <function InteractiveShell._run_cell at 0x000001ED7DC99240>
+             └ <ipykernel.zmqshell.ZMQInteractiveShell object at 0x000001ED7F305030>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\IPython\core\interactiveshell.py", line 3132, in _run_cell
+    result = runner(coro)
+             │      └ <coroutine object InteractiveShell.run_cell_async at 0x000001ED012B1850>
+             └ <function _pseudo_sync_runner at 0x000001ED7DC88B80>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\IPython\core\async_helpers.py", line 128, in _pseudo_sync_runner
+    coro.send(None)
+    │    └ <method 'send' of 'coroutine' objects>
+    └ <coroutine object InteractiveShell.run_cell_async at 0x000001ED012B1850>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\IPython\core\interactiveshell.py", line 3336, in run_cell_async
+    has_raised = await self.run_ast_nodes(code_ast.body, cell_name,
+                       │    │             │        │     └ 'C:\\Users\\eric3\\AppData\\Local\\Temp\\ipykernel_9132\\60166502.py'
+                       │    │             │        └ [<ast.With object at 0x000001ED7FB20D60>]
+                       │    │             └ <ast.Module object at 0x000001ED7FB204F0>
+                       │    └ <function InteractiveShell.run_ast_nodes at 0x000001ED7DC99510>
+                       └ <ipykernel.zmqshell.ZMQInteractiveShell object at 0x000001ED7F305030>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\IPython\core\interactiveshell.py", line 3519, in run_ast_nodes
+    if await self.run_code(code, result, async_=asy):
+             │    │        │     │              └ False
+             │    │        │     └ <ExecutionResult object at 1ed7faf4eb0, execution_count=37 error_before_exec=None error_in_exec=None info=<ExecutionInfo obje...
+             │    │        └ <code object <module> at 0x000001ED0105FEC0, file "C:\Users\eric3\AppData\Local\Temp\ipykernel_9132\60166502.py", line 1>
+             │    └ <function InteractiveShell.run_code at 0x000001ED7DC995A0>
+             └ <ipykernel.zmqshell.ZMQInteractiveShell object at 0x000001ED7F305030>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\IPython\core\interactiveshell.py", line 3579, in run_code
+    exec(code_obj, self.user_global_ns, self.user_ns)
+         │         │    │               │    └ {'__name__': '__main__', '__doc__': 'Automatically created module for IPython interactive environment', '__package__': None, ...
+         │         │    │               └ <ipykernel.zmqshell.ZMQInteractiveShell object at 0x000001ED7F305030>
+         │         │    └ <property object at 0x000001ED7DC76D40>
+         │         └ <ipykernel.zmqshell.ZMQInteractiveShell object at 0x000001ED7F305030>
+         └ <code object <module> at 0x000001ED0105FEC0, file "C:\Users\eric3\AppData\Local\Temp\ipykernel_9132\60166502.py", line 1>
+
+> File "C:\Users\eric3\AppData\Local\Temp\ipykernel_9132\60166502.py", line 2, in <module>
+    1 / 0
+
+ZeroDivisionError: division by zero
+2025-08-20 14:38:37.169 | ERROR    | __main__:<module>:8 - get except
+Traceback (most recent call last):
+
+  File "C:\Users\eric3\AppData\Local\Programs\Python\Python310\lib\runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+           │         │     └ {'__name__': '__main__', '__doc__': 'Entry point for launching an IPython kernel.\n\nThis is separate from the ipykernel pack...
+           │         └ <code object <module> at 0x000002D678A73050, file "e:\Study\python\loguru_study\.venv\lib\site-packages\ipykernel_launcher.py...
+           └ <function _run_code at 0x000002D678A6F1C0>
+
+  File "C:\Users\eric3\AppData\Local\Programs\Python\Python310\lib\runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+         │     └ {'__name__': '__main__', '__doc__': 'Entry point for launching an IPython kernel.\n\nThis is separate from the ipykernel pack...
+         └ <code object <module> at 0x000002D678A73050, file "e:\Study\python\loguru_study\.venv\lib\site-packages\ipykernel_launcher.py...
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\ipykernel_launcher.py", line 18, in <module>
+    app.launch_new_instance()
+    │   └ <bound method Application.launch_instance of <class 'ipykernel.kernelapp.IPKernelApp'>>
+    └ <module 'ipykernel.kernelapp' from 'e:\\Study\\python\\loguru_study\\.venv\\lib\\site-packages\\ipykernel\\kernelapp.py'>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\traitlets\config\application.py", line 1075, in launch_instance
+    app.start()
+    │   └ <function IPKernelApp.start at 0x000002D67CBC93F0>
+    └ <ipykernel.kernelapp.IPKernelApp object at 0x000002D678A1C700>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\ipykernel\kernelapp.py", line 739, in start
+    self.io_loop.start()
+    │    │       └ <function BaseAsyncIOLoop.start at 0x000002D67CC37A30>
+    │    └ <tornado.platform.asyncio.AsyncIOMainLoop object at 0x000002D67CC3FC10>
+    └ <ipykernel.kernelapp.IPKernelApp object at 0x000002D678A1C700>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\tornado\platform\asyncio.py", line 211, in start
+    self.asyncio_loop.run_forever()
+    │    │            └ <function BaseEventLoop.run_forever at 0x000002D67AAC7A30>
+    │    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+    └ <tornado.platform.asyncio.AsyncIOMainLoop object at 0x000002D67CC3FC10>
+
+  File "C:\Users\eric3\AppData\Local\Programs\Python\Python310\lib\asyncio\base_events.py", line 595, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x000002D67AAE15A0>
+    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\eric3\AppData\Local\Programs\Python\Python310\lib\asyncio\base_events.py", line 1881, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x000002D67AA70CA0>
+    └ <Handle Task.task_wakeup(<Future finis...3B)>, ...],))>)>
+
+  File "C:\Users\eric3\AppData\Local\Programs\Python\Python310\lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle Task.task_wakeup(<Future finis...3B)>, ...],))>)>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle Task.task_wakeup(<Future finis...3B)>, ...],))>)>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle Task.task_wakeup(<Future finis...3B)>, ...],))>)>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\ipykernel\kernelbase.py", line 519, in dispatch_queue
+    await self.process_one()
+          │    └ <function Kernel.process_one at 0x000002D67CB90040>
+          └ <ipykernel.ipkernel.IPythonKernel object at 0x000002D67CC6C220>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\ipykernel\kernelbase.py", line 508, in process_one
+    await dispatch(*args)
+          │         └ ([<zmq.Frame(b'6fb0855b-b55'...36B)>, <zmq.Frame(b'<IDS|MSG>')>, <zmq.Frame(b'9be59d03a4fd'...64B)>, <zmq.Frame(b'{"date":"20...
+          └ <bound method Kernel.dispatch_shell of <ipykernel.ipkernel.IPythonKernel object at 0x000002D67CC6C220>>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\ipykernel\kernelbase.py", line 400, in dispatch_shell
+    await result
+          └ <coroutine object IPythonKernel.execute_request at 0x000002D67E611930>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\ipykernel\ipkernel.py", line 368, in execute_request
+    await super().execute_request(stream, ident, parent)
+                                  │       │      └ {'header': {'date': datetime.datetime(2025, 8, 20, 6, 38, 37, 164000, tzinfo=tzutc()), 'msg_id': '8c226a38-1f1e-4082-aed7-2fa...
+                                  │       └ [b'6fb0855b-b55d-4c15-949f-20c7da6b6ca2']
+                                  └ <zmq.eventloop.zmqstream.ZMQStream object at 0x000002D67CC3F970>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\ipykernel\kernelbase.py", line 767, in execute_request
+    reply_content = await reply_content
+                          └ <coroutine object IPythonKernel.do_execute at 0x000002D67E610430>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\ipykernel\ipkernel.py", line 455, in do_execute
+    res = shell.run_cell(
+          │     └ <function ZMQInteractiveShell.run_cell at 0x000002D67CBBE9E0>
+          └ <ipykernel.zmqshell.ZMQInteractiveShell object at 0x000002D67D0A5030>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\ipykernel\zmqshell.py", line 577, in run_cell
+    return super().run_cell(*args, **kwargs)
+                             │       └ {'store_history': True, 'silent': False, 'cell_id': 'vscode-notebook-cell:/e%3A/Study/python/loguru_study/guru.ipynb#X25sZmls...
+                             └ ("logger.remove()\nlogger.add(sys.stdout)\nlogger.add('except.log')\ntry:\n    1 / 0   # 除0异常\nexcept:\n    # loguru会记录异常的完整信...
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\IPython\core\interactiveshell.py", line 3077, in run_cell
+    result = self._run_cell(
+             │    └ <function InteractiveShell._run_cell at 0x000002D67BA39240>
+             └ <ipykernel.zmqshell.ZMQInteractiveShell object at 0x000002D67D0A5030>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\IPython\core\interactiveshell.py", line 3132, in _run_cell
+    result = runner(coro)
+             │      └ <coroutine object InteractiveShell.run_cell_async at 0x000002D67E610040>
+             └ <function _pseudo_sync_runner at 0x000002D67BA28B80>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\IPython\core\async_helpers.py", line 128, in _pseudo_sync_runner
+    coro.send(None)
+    │    └ <method 'send' of 'coroutine' objects>
+    └ <coroutine object InteractiveShell.run_cell_async at 0x000002D67E610040>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\IPython\core\interactiveshell.py", line 3336, in run_cell_async
+    has_raised = await self.run_ast_nodes(code_ast.body, cell_name,
+                       │    │             │        │     └ 'C:\\Users\\eric3\\AppData\\Local\\Temp\\ipykernel_12308\\287218791.py'
+                       │    │             │        └ [<ast.Expr object at 0x000002D67E49F940>, <ast.Expr object at 0x000002D67E4CA830>, <ast.Expr object at 0x000002D67E271360>, <...
+                       │    │             └ <ast.Module object at 0x000002D67E49F130>
+                       │    └ <function InteractiveShell.run_ast_nodes at 0x000002D67BA39510>
+                       └ <ipykernel.zmqshell.ZMQInteractiveShell object at 0x000002D67D0A5030>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\IPython\core\interactiveshell.py", line 3519, in run_ast_nodes
+    if await self.run_code(code, result, async_=asy):
+             │    │        │     │              └ False
+             │    │        │     └ <ExecutionResult object at 2d67e271ea0, execution_count=11 error_before_exec=None error_in_exec=None info=<ExecutionInfo obje...
+             │    │        └ <code object <module> at 0x000002D67E6210B0, file "C:\Users\eric3\AppData\Local\Temp\ipykernel_12308\287218791.py", line 1>
+             │    └ <function InteractiveShell.run_code at 0x000002D67BA395A0>
+             └ <ipykernel.zmqshell.ZMQInteractiveShell object at 0x000002D67D0A5030>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\IPython\core\interactiveshell.py", line 3579, in run_code
+    exec(code_obj, self.user_global_ns, self.user_ns)
+         │         │    │               │    └ {'__name__': '__main__', '__doc__': 'Automatically created module for IPython interactive environment', '__package__': None, ...
+         │         │    │               └ <ipykernel.zmqshell.ZMQInteractiveShell object at 0x000002D67D0A5030>
+         │         │    └ <property object at 0x000002D67BA16D40>
+         │         └ <ipykernel.zmqshell.ZMQInteractiveShell object at 0x000002D67D0A5030>
+         └ <code object <module> at 0x000002D67E6210B0, file "C:\Users\eric3\AppData\Local\Temp\ipykernel_12308\287218791.py", line 1>
+
+> File "C:\Users\eric3\AppData\Local\Temp\ipykernel_12308\287218791.py", line 5, in <module>
+    1 / 0   # 除0异常
+
+ZeroDivisionError: division by zero
+2025-08-20 14:38:37.199 | ERROR    | __main__:<module>:2 - An error has been caught in function '<module>', process 'MainProcess' (12308), thread 'MainThread' (16640):
+Traceback (most recent call last):
+
+  File "C:\Users\eric3\AppData\Local\Programs\Python\Python310\lib\runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+           │         │     └ {'__name__': '__main__', '__doc__': 'Entry point for launching an IPython kernel.\n\nThis is separate from the ipykernel pack...
+           │         └ <code object <module> at 0x000002D678A73050, file "e:\Study\python\loguru_study\.venv\lib\site-packages\ipykernel_launcher.py...
+           └ <function _run_code at 0x000002D678A6F1C0>
+
+  File "C:\Users\eric3\AppData\Local\Programs\Python\Python310\lib\runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+         │     └ {'__name__': '__main__', '__doc__': 'Entry point for launching an IPython kernel.\n\nThis is separate from the ipykernel pack...
+         └ <code object <module> at 0x000002D678A73050, file "e:\Study\python\loguru_study\.venv\lib\site-packages\ipykernel_launcher.py...
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\ipykernel_launcher.py", line 18, in <module>
+    app.launch_new_instance()
+    │   └ <bound method Application.launch_instance of <class 'ipykernel.kernelapp.IPKernelApp'>>
+    └ <module 'ipykernel.kernelapp' from 'e:\\Study\\python\\loguru_study\\.venv\\lib\\site-packages\\ipykernel\\kernelapp.py'>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\traitlets\config\application.py", line 1075, in launch_instance
+    app.start()
+    │   └ <function IPKernelApp.start at 0x000002D67CBC93F0>
+    └ <ipykernel.kernelapp.IPKernelApp object at 0x000002D678A1C700>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\ipykernel\kernelapp.py", line 739, in start
+    self.io_loop.start()
+    │    │       └ <function BaseAsyncIOLoop.start at 0x000002D67CC37A30>
+    │    └ <tornado.platform.asyncio.AsyncIOMainLoop object at 0x000002D67CC3FC10>
+    └ <ipykernel.kernelapp.IPKernelApp object at 0x000002D678A1C700>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\tornado\platform\asyncio.py", line 211, in start
+    self.asyncio_loop.run_forever()
+    │    │            └ <function BaseEventLoop.run_forever at 0x000002D67AAC7A30>
+    │    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+    └ <tornado.platform.asyncio.AsyncIOMainLoop object at 0x000002D67CC3FC10>
+
+  File "C:\Users\eric3\AppData\Local\Programs\Python\Python310\lib\asyncio\base_events.py", line 595, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x000002D67AAE15A0>
+    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\eric3\AppData\Local\Programs\Python\Python310\lib\asyncio\base_events.py", line 1881, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x000002D67AA70CA0>
+    └ <Handle Task.task_wakeup(<Future finis...3B)>, ...],))>)>
+
+  File "C:\Users\eric3\AppData\Local\Programs\Python\Python310\lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle Task.task_wakeup(<Future finis...3B)>, ...],))>)>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle Task.task_wakeup(<Future finis...3B)>, ...],))>)>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle Task.task_wakeup(<Future finis...3B)>, ...],))>)>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\ipykernel\kernelbase.py", line 519, in dispatch_queue
+    await self.process_one()
+          │    └ <function Kernel.process_one at 0x000002D67CB90040>
+          └ <ipykernel.ipkernel.IPythonKernel object at 0x000002D67CC6C220>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\ipykernel\kernelbase.py", line 508, in process_one
+    await dispatch(*args)
+          │         └ ([<zmq.Frame(b'6fb0855b-b55'...36B)>, <zmq.Frame(b'<IDS|MSG>')>, <zmq.Frame(b'0a574164e9ce'...64B)>, <zmq.Frame(b'{"date":"20...
+          └ <bound method Kernel.dispatch_shell of <ipykernel.ipkernel.IPythonKernel object at 0x000002D67CC6C220>>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\ipykernel\kernelbase.py", line 400, in dispatch_shell
+    await result
+          └ <coroutine object IPythonKernel.execute_request at 0x000002D67E610040>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\ipykernel\ipkernel.py", line 368, in execute_request
+    await super().execute_request(stream, ident, parent)
+                                  │       │      └ {'header': {'date': datetime.datetime(2025, 8, 20, 6, 38, 37, 196000, tzinfo=tzutc()), 'msg_id': '35ff76b3-eed6-4b08-829f-a8f...
+                                  │       └ [b'6fb0855b-b55d-4c15-949f-20c7da6b6ca2']
+                                  └ <zmq.eventloop.zmqstream.ZMQStream object at 0x000002D67CC3F970>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\ipykernel\kernelbase.py", line 767, in execute_request
+    reply_content = await reply_content
+                          └ <coroutine object IPythonKernel.do_execute at 0x000002D67E610890>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\ipykernel\ipkernel.py", line 455, in do_execute
+    res = shell.run_cell(
+          │     └ <function ZMQInteractiveShell.run_cell at 0x000002D67CBBE9E0>
+          └ <ipykernel.zmqshell.ZMQInteractiveShell object at 0x000002D67D0A5030>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\ipykernel\zmqshell.py", line 577, in run_cell
+    return super().run_cell(*args, **kwargs)
+                             │       └ {'store_history': True, 'silent': False, 'cell_id': 'vscode-notebook-cell:/e%3A/Study/python/loguru_study/guru.ipynb#X32sZmls...
+                             └ ('# logger.catch()可以自动捕获异常\nwith logger.catch():\n    1 / 0',)
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\IPython\core\interactiveshell.py", line 3077, in run_cell
+    result = self._run_cell(
+             │    └ <function InteractiveShell._run_cell at 0x000002D67BA39240>
+             └ <ipykernel.zmqshell.ZMQInteractiveShell object at 0x000002D67D0A5030>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\IPython\core\interactiveshell.py", line 3132, in _run_cell
+    result = runner(coro)
+             │      └ <coroutine object InteractiveShell.run_cell_async at 0x000002D67E610F90>
+             └ <function _pseudo_sync_runner at 0x000002D67BA28B80>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\IPython\core\async_helpers.py", line 128, in _pseudo_sync_runner
+    coro.send(None)
+    │    └ <method 'send' of 'coroutine' objects>
+    └ <coroutine object InteractiveShell.run_cell_async at 0x000002D67E610F90>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\IPython\core\interactiveshell.py", line 3336, in run_cell_async
+    has_raised = await self.run_ast_nodes(code_ast.body, cell_name,
+                       │    │             │        │     └ 'C:\\Users\\eric3\\AppData\\Local\\Temp\\ipykernel_12308\\1073960650.py'
+                       │    │             │        └ [<ast.With object at 0x000002D67E49C370>]
+                       │    │             └ <ast.Module object at 0x000002D67E49F6A0>
+                       │    └ <function InteractiveShell.run_ast_nodes at 0x000002D67BA39510>
+                       └ <ipykernel.zmqshell.ZMQInteractiveShell object at 0x000002D67D0A5030>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\IPython\core\interactiveshell.py", line 3519, in run_ast_nodes
+    if await self.run_code(code, result, async_=asy):
+             │    │        │     │              └ False
+             │    │        │     └ <ExecutionResult object at 2d67e49ebf0, execution_count=12 error_before_exec=None error_in_exec=None info=<ExecutionInfo obje...
+             │    │        └ <code object <module> at 0x000002D67E6203A0, file "C:\Users\eric3\AppData\Local\Temp\ipykernel_12308\1073960650.py", line 1>
+             │    └ <function InteractiveShell.run_code at 0x000002D67BA395A0>
+             └ <ipykernel.zmqshell.ZMQInteractiveShell object at 0x000002D67D0A5030>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\IPython\core\interactiveshell.py", line 3579, in run_code
+    exec(code_obj, self.user_global_ns, self.user_ns)
+         │         │    │               │    └ {'__name__': '__main__', '__doc__': 'Automatically created module for IPython interactive environment', '__package__': None, ...
+         │         │    │               └ <ipykernel.zmqshell.ZMQInteractiveShell object at 0x000002D67D0A5030>
+         │         │    └ <property object at 0x000002D67BA16D40>
+         │         └ <ipykernel.zmqshell.ZMQInteractiveShell object at 0x000002D67D0A5030>
+         └ <code object <module> at 0x000002D67E6203A0, file "C:\Users\eric3\AppData\Local\Temp\ipykernel_12308\1073960650.py", line 1>
+
+> File "C:\Users\eric3\AppData\Local\Temp\ipykernel_12308\1073960650.py", line 3, in <module>
+    1 / 0
+
+ZeroDivisionError: division by zero
+2025-08-20 14:38:37.213 | WARNING  | __main__:<module>:3 - An error has been caught in function '<module>', process 'MainProcess' (12308), thread 'MainThread' (16640):
+Traceback (most recent call last):
+
+  File "C:\Users\eric3\AppData\Local\Programs\Python\Python310\lib\runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+           │         │     └ {'__name__': '__main__', '__doc__': 'Entry point for launching an IPython kernel.\n\nThis is separate from the ipykernel pack...
+           │         └ <code object <module> at 0x000002D678A73050, file "e:\Study\python\loguru_study\.venv\lib\site-packages\ipykernel_launcher.py...
+           └ <function _run_code at 0x000002D678A6F1C0>
+
+  File "C:\Users\eric3\AppData\Local\Programs\Python\Python310\lib\runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+         │     └ {'__name__': '__main__', '__doc__': 'Entry point for launching an IPython kernel.\n\nThis is separate from the ipykernel pack...
+         └ <code object <module> at 0x000002D678A73050, file "e:\Study\python\loguru_study\.venv\lib\site-packages\ipykernel_launcher.py...
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\ipykernel_launcher.py", line 18, in <module>
+    app.launch_new_instance()
+    │   └ <bound method Application.launch_instance of <class 'ipykernel.kernelapp.IPKernelApp'>>
+    └ <module 'ipykernel.kernelapp' from 'e:\\Study\\python\\loguru_study\\.venv\\lib\\site-packages\\ipykernel\\kernelapp.py'>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\traitlets\config\application.py", line 1075, in launch_instance
+    app.start()
+    │   └ <function IPKernelApp.start at 0x000002D67CBC93F0>
+    └ <ipykernel.kernelapp.IPKernelApp object at 0x000002D678A1C700>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\ipykernel\kernelapp.py", line 739, in start
+    self.io_loop.start()
+    │    │       └ <function BaseAsyncIOLoop.start at 0x000002D67CC37A30>
+    │    └ <tornado.platform.asyncio.AsyncIOMainLoop object at 0x000002D67CC3FC10>
+    └ <ipykernel.kernelapp.IPKernelApp object at 0x000002D678A1C700>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\tornado\platform\asyncio.py", line 211, in start
+    self.asyncio_loop.run_forever()
+    │    │            └ <function BaseEventLoop.run_forever at 0x000002D67AAC7A30>
+    │    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+    └ <tornado.platform.asyncio.AsyncIOMainLoop object at 0x000002D67CC3FC10>
+
+  File "C:\Users\eric3\AppData\Local\Programs\Python\Python310\lib\asyncio\base_events.py", line 595, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x000002D67AAE15A0>
+    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\eric3\AppData\Local\Programs\Python\Python310\lib\asyncio\base_events.py", line 1881, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x000002D67AA70CA0>
+    └ <Handle Task.task_wakeup(<Future finis...3B)>, ...],))>)>
+
+  File "C:\Users\eric3\AppData\Local\Programs\Python\Python310\lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle Task.task_wakeup(<Future finis...3B)>, ...],))>)>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle Task.task_wakeup(<Future finis...3B)>, ...],))>)>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle Task.task_wakeup(<Future finis...3B)>, ...],))>)>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\ipykernel\kernelbase.py", line 519, in dispatch_queue
+    await self.process_one()
+          │    └ <function Kernel.process_one at 0x000002D67CB90040>
+          └ <ipykernel.ipkernel.IPythonKernel object at 0x000002D67CC6C220>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\ipykernel\kernelbase.py", line 508, in process_one
+    await dispatch(*args)
+          │         └ ([<zmq.Frame(b'6fb0855b-b55'...36B)>, <zmq.Frame(b'<IDS|MSG>')>, <zmq.Frame(b'620bb955dadf'...64B)>, <zmq.Frame(b'{"date":"20...
+          └ <bound method Kernel.dispatch_shell of <ipykernel.ipkernel.IPythonKernel object at 0x000002D67CC6C220>>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\ipykernel\kernelbase.py", line 400, in dispatch_shell
+    await result
+          └ <coroutine object IPythonKernel.execute_request at 0x000002D67E610F90>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\ipykernel\ipkernel.py", line 368, in execute_request
+    await super().execute_request(stream, ident, parent)
+                                  │       │      └ {'header': {'date': datetime.datetime(2025, 8, 20, 6, 38, 37, 211000, tzinfo=tzutc()), 'msg_id': '23064154-83d7-4401-b82c-d8c...
+                                  │       └ [b'6fb0855b-b55d-4c15-949f-20c7da6b6ca2']
+                                  └ <zmq.eventloop.zmqstream.ZMQStream object at 0x000002D67CC3F970>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\ipykernel\kernelbase.py", line 767, in execute_request
+    reply_content = await reply_content
+                          └ <coroutine object IPythonKernel.do_execute at 0x000002D67E611230>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\ipykernel\ipkernel.py", line 455, in do_execute
+    res = shell.run_cell(
+          │     └ <function ZMQInteractiveShell.run_cell at 0x000002D67CBBE9E0>
+          └ <ipykernel.zmqshell.ZMQInteractiveShell object at 0x000002D67D0A5030>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\ipykernel\zmqshell.py", line 577, in run_cell
+    return super().run_cell(*args, **kwargs)
+                             │       └ {'store_history': True, 'silent': False, 'cell_id': 'vscode-notebook-cell:/e%3A/Study/python/loguru_study/guru.ipynb#X34sZmls...
+                             └ ('# logger.catch()默认捕获所有类型的异常\n# 可以通过传递参数自定义捕获异常的类型，并设置异常的日志等级\nwith logger.catch(ZeroDivisionError, level="WARNING"):\n    1...
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\IPython\core\interactiveshell.py", line 3077, in run_cell
+    result = self._run_cell(
+             │    └ <function InteractiveShell._run_cell at 0x000002D67BA39240>
+             └ <ipykernel.zmqshell.ZMQInteractiveShell object at 0x000002D67D0A5030>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\IPython\core\interactiveshell.py", line 3132, in _run_cell
+    result = runner(coro)
+             │      └ <coroutine object InteractiveShell.run_cell_async at 0x000002D67E611380>
+             └ <function _pseudo_sync_runner at 0x000002D67BA28B80>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\IPython\core\async_helpers.py", line 128, in _pseudo_sync_runner
+    coro.send(None)
+    │    └ <method 'send' of 'coroutine' objects>
+    └ <coroutine object InteractiveShell.run_cell_async at 0x000002D67E611380>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\IPython\core\interactiveshell.py", line 3336, in run_cell_async
+    has_raised = await self.run_ast_nodes(code_ast.body, cell_name,
+                       │    │             │        │     └ 'C:\\Users\\eric3\\AppData\\Local\\Temp\\ipykernel_12308\\1887629762.py'
+                       │    │             │        └ [<ast.With object at 0x000002D67E49C160>]
+                       │    │             └ <ast.Module object at 0x000002D67E49E2C0>
+                       │    └ <function InteractiveShell.run_ast_nodes at 0x000002D67BA39510>
+                       └ <ipykernel.zmqshell.ZMQInteractiveShell object at 0x000002D67D0A5030>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\IPython\core\interactiveshell.py", line 3519, in run_ast_nodes
+    if await self.run_code(code, result, async_=asy):
+             │    │        │     │              └ False
+             │    │        │     └ <ExecutionResult object at 2d67e2716c0, execution_count=13 error_before_exec=None error_in_exec=None info=<ExecutionInfo obje...
+             │    │        └ <code object <module> at 0x000002D67E60FAA0, file "C:\Users\eric3\AppData\Local\Temp\ipykernel_12308\1887629762.py", line 1>
+             │    └ <function InteractiveShell.run_code at 0x000002D67BA395A0>
+             └ <ipykernel.zmqshell.ZMQInteractiveShell object at 0x000002D67D0A5030>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\IPython\core\interactiveshell.py", line 3579, in run_code
+    exec(code_obj, self.user_global_ns, self.user_ns)
+         │         │    │               │    └ {'__name__': '__main__', '__doc__': 'Automatically created module for IPython interactive environment', '__package__': None, ...
+         │         │    │               └ <ipykernel.zmqshell.ZMQInteractiveShell object at 0x000002D67D0A5030>
+         │         │    └ <property object at 0x000002D67BA16D40>
+         │         └ <ipykernel.zmqshell.ZMQInteractiveShell object at 0x000002D67D0A5030>
+         └ <code object <module> at 0x000002D67E60FAA0, file "C:\Users\eric3\AppData\Local\Temp\ipykernel_12308\1887629762.py", line 1>
+
+> File "C:\Users\eric3\AppData\Local\Temp\ipykernel_12308\1887629762.py", line 4, in <module>
+    1 / 0
+
+ZeroDivisionError: division by zero
+2025-08-20 14:39:37.534 | ERROR    | __main__:<module>:5 - An error has been caught in function '<module>', process 'MainProcess' (12308), thread 'MainThread' (16640):
+Traceback (most recent call last):
+
+  File "C:\Users\eric3\AppData\Local\Programs\Python\Python310\lib\runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+           │         │     └ {'__name__': '__main__', '__doc__': 'Entry point for launching an IPython kernel.\n\nThis is separate from the ipykernel pack...
+           │         └ <code object <module> at 0x000002D678A73050, file "e:\Study\python\loguru_study\.venv\lib\site-packages\ipykernel_launcher.py...
+           └ <function _run_code at 0x000002D678A6F1C0>
+
+  File "C:\Users\eric3\AppData\Local\Programs\Python\Python310\lib\runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+         │     └ {'__name__': '__main__', '__doc__': 'Entry point for launching an IPython kernel.\n\nThis is separate from the ipykernel pack...
+         └ <code object <module> at 0x000002D678A73050, file "e:\Study\python\loguru_study\.venv\lib\site-packages\ipykernel_launcher.py...
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\ipykernel_launcher.py", line 18, in <module>
+    app.launch_new_instance()
+    │   └ <bound method Application.launch_instance of <class 'ipykernel.kernelapp.IPKernelApp'>>
+    └ <module 'ipykernel.kernelapp' from 'e:\\Study\\python\\loguru_study\\.venv\\lib\\site-packages\\ipykernel\\kernelapp.py'>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\traitlets\config\application.py", line 1075, in launch_instance
+    app.start()
+    │   └ <function IPKernelApp.start at 0x000002D67CBC93F0>
+    └ <ipykernel.kernelapp.IPKernelApp object at 0x000002D678A1C700>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\ipykernel\kernelapp.py", line 739, in start
+    self.io_loop.start()
+    │    │       └ <function BaseAsyncIOLoop.start at 0x000002D67CC37A30>
+    │    └ <tornado.platform.asyncio.AsyncIOMainLoop object at 0x000002D67CC3FC10>
+    └ <ipykernel.kernelapp.IPKernelApp object at 0x000002D678A1C700>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\tornado\platform\asyncio.py", line 211, in start
+    self.asyncio_loop.run_forever()
+    │    │            └ <function BaseEventLoop.run_forever at 0x000002D67AAC7A30>
+    │    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+    └ <tornado.platform.asyncio.AsyncIOMainLoop object at 0x000002D67CC3FC10>
+
+  File "C:\Users\eric3\AppData\Local\Programs\Python\Python310\lib\asyncio\base_events.py", line 595, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x000002D67AAE15A0>
+    └ <_WindowsSelectorEventLoop running=True closed=False debug=False>
+
+  File "C:\Users\eric3\AppData\Local\Programs\Python\Python310\lib\asyncio\base_events.py", line 1881, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x000002D67AA70CA0>
+    └ <Handle Task.task_wakeup(<Future finis...3B)>, ...],))>)>
+
+  File "C:\Users\eric3\AppData\Local\Programs\Python\Python310\lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle Task.task_wakeup(<Future finis...3B)>, ...],))>)>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle Task.task_wakeup(<Future finis...3B)>, ...],))>)>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle Task.task_wakeup(<Future finis...3B)>, ...],))>)>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\ipykernel\kernelbase.py", line 519, in dispatch_queue
+    await self.process_one()
+          │    └ <function Kernel.process_one at 0x000002D67CB90040>
+          └ <ipykernel.ipkernel.IPythonKernel object at 0x000002D67CC6C220>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\ipykernel\kernelbase.py", line 508, in process_one
+    await dispatch(*args)
+          │         └ ([<zmq.Frame(b'6fb0855b-b55'...36B)>, <zmq.Frame(b'<IDS|MSG>')>, <zmq.Frame(b'13773e02044d'...64B)>, <zmq.Frame(b'{"date":"20...
+          └ <bound method Kernel.dispatch_shell of <ipykernel.ipkernel.IPythonKernel object at 0x000002D67CC6C220>>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\ipykernel\kernelbase.py", line 400, in dispatch_shell
+    await result
+          └ <coroutine object IPythonKernel.execute_request at 0x000002D67E6D7DF0>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\ipykernel\ipkernel.py", line 368, in execute_request
+    await super().execute_request(stream, ident, parent)
+                                  │       │      └ {'header': {'date': datetime.datetime(2025, 8, 20, 6, 39, 37, 531000, tzinfo=tzutc()), 'msg_id': '0aaaf7db-10e6-4e35-9b49-d41...
+                                  │       └ [b'6fb0855b-b55d-4c15-949f-20c7da6b6ca2']
+                                  └ <zmq.eventloop.zmqstream.ZMQStream object at 0x000002D67CC3F970>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\ipykernel\kernelbase.py", line 767, in execute_request
+    reply_content = await reply_content
+                          └ <coroutine object IPythonKernel.do_execute at 0x000002D67E7105F0>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\ipykernel\ipkernel.py", line 455, in do_execute
+    res = shell.run_cell(
+          │     └ <function ZMQInteractiveShell.run_cell at 0x000002D67CBBE9E0>
+          └ <ipykernel.zmqshell.ZMQInteractiveShell object at 0x000002D67D0A5030>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\ipykernel\zmqshell.py", line 577, in run_cell
+    return super().run_cell(*args, **kwargs)
+                             │       └ {'store_history': True, 'silent': False, 'cell_id': 'vscode-notebook-cell:/e%3A/Study/python/loguru_study/guru.ipynb#X35sZmls...
+                             └ ('# 此外，logger.catch()也可作为装饰器\n@logger.catch()\ndef test():\n    1 / 0\ntest()',)
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\IPython\core\interactiveshell.py", line 3077, in run_cell
+    result = self._run_cell(
+             │    └ <function InteractiveShell._run_cell at 0x000002D67BA39240>
+             └ <ipykernel.zmqshell.ZMQInteractiveShell object at 0x000002D67D0A5030>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\IPython\core\interactiveshell.py", line 3132, in _run_cell
+    result = runner(coro)
+             │      └ <coroutine object InteractiveShell.run_cell_async at 0x000002D67E7106D0>
+             └ <function _pseudo_sync_runner at 0x000002D67BA28B80>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\IPython\core\async_helpers.py", line 128, in _pseudo_sync_runner
+    coro.send(None)
+    │    └ <method 'send' of 'coroutine' objects>
+    └ <coroutine object InteractiveShell.run_cell_async at 0x000002D67E7106D0>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\IPython\core\interactiveshell.py", line 3336, in run_cell_async
+    has_raised = await self.run_ast_nodes(code_ast.body, cell_name,
+                       │    │             │        │     └ 'C:\\Users\\eric3\\AppData\\Local\\Temp\\ipykernel_12308\\1192816611.py'
+                       │    │             │        └ [<ast.FunctionDef object at 0x000002D67E3BFEB0>, <ast.Expr object at 0x000002D67E271BA0>]
+                       │    │             └ <ast.Module object at 0x000002D67E3FDD50>
+                       │    └ <function InteractiveShell.run_ast_nodes at 0x000002D67BA39510>
+                       └ <ipykernel.zmqshell.ZMQInteractiveShell object at 0x000002D67D0A5030>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\IPython\core\interactiveshell.py", line 3519, in run_ast_nodes
+    if await self.run_code(code, result, async_=asy):
+             │    │        │     │              └ False
+             │    │        │     └ <ExecutionResult object at 2d67e2725f0, execution_count=15 error_before_exec=None error_in_exec=None info=<ExecutionInfo obje...
+             │    │        └ <code object <module> at 0x000002D67E60EB80, file "C:\Users\eric3\AppData\Local\Temp\ipykernel_12308\1192816611.py", line 1>
+             │    └ <function InteractiveShell.run_code at 0x000002D67BA395A0>
+             └ <ipykernel.zmqshell.ZMQInteractiveShell object at 0x000002D67D0A5030>
+
+  File "e:\Study\python\loguru_study\.venv\lib\site-packages\IPython\core\interactiveshell.py", line 3579, in run_code
+    exec(code_obj, self.user_global_ns, self.user_ns)
+         │         │    │               │    └ {'__name__': '__main__', '__doc__': 'Automatically created module for IPython interactive environment', '__package__': None, ...
+         │         │    │               └ <ipykernel.zmqshell.ZMQInteractiveShell object at 0x000002D67D0A5030>
+         │         │    └ <property object at 0x000002D67BA16D40>
+         │         └ <ipykernel.zmqshell.ZMQInteractiveShell object at 0x000002D67D0A5030>
+         └ <code object <module> at 0x000002D67E60EB80, file "C:\Users\eric3\AppData\Local\Temp\ipykernel_12308\1192816611.py", line 1>
+
+> File "C:\Users\eric3\AppData\Local\Temp\ipykernel_12308\1192816611.py", line 5, in <module>
+    test()
+    └ <function test at 0x000002D67E6CD090>
+
+  File "C:\Users\eric3\AppData\Local\Temp\ipykernel_12308\1192816611.py", line 4, in test
+    1 / 0
+
+ZeroDivisionError: division by zero
